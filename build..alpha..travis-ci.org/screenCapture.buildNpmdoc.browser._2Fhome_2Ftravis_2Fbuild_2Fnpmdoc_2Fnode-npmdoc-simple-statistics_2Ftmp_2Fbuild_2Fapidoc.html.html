@@ -1,0 +1,3091 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/simple-statistics/simple-statistics#readme">simple-statistics (v3.0.0)</a>
+</h1>
+<h4>Simple Statistics</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.simple-statistics">module simple-statistics</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.addToMean">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>addToMean
+            <span class="apidocSignatureSpan">(mean, n, newValue)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.average">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>average
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.bayesian">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>bayesian
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.bernoulliDistribution">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>bernoulliDistribution
+            <span class="apidocSignatureSpan">(p)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.binomialDistribution">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>binomialDistribution
+            <span class="apidocSignatureSpan">( trials, probability)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.bisect">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>bisect
+            <span class="apidocSignatureSpan">( func/*: (x: any)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.chiSquaredGoodnessOfFit">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>chiSquaredGoodnessOfFit
+            <span class="apidocSignatureSpan">( data, distributionType, significance)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.chunk">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>chunk
+            <span class="apidocSignatureSpan">(x, chunkSize)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.ckmeans">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>ckmeans
+            <span class="apidocSignatureSpan">(x, nClusters)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.combinations">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>combinations
+            <span class="apidocSignatureSpan">(x, k)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.combinationsReplacement">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>combinationsReplacement
+            <span class="apidocSignatureSpan">( x, k)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.combineMeans">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>combineMeans
+            <span class="apidocSignatureSpan">(mean1, n1, mean2, n2)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.combineVariances">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>combineVariances
+            <span class="apidocSignatureSpan">( variance1, mean1, n1, variance2, mean2, n2)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.cumulativeStdNormalProbability">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>cumulativeStdNormalProbability
+            <span class="apidocSignatureSpan">(z)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.equalIntervalBreaks">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>equalIntervalBreaks
+            <span class="apidocSignatureSpan">(x, nClasses)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.erf">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>erf
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.errorFunction">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>errorFunction
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.factorial">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>factorial
+            <span class="apidocSignatureSpan">(n)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.geometricMean">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>geometricMean
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.harmonicMean">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>harmonicMean
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.interquartileRange">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>interquartileRange
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.inverseErrorFunction">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>inverseErrorFunction
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.iqr">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>iqr
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.linearRegression">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>linearRegression
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.linearRegressionLine">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>linearRegressionLine
+            <span class="apidocSignatureSpan">(mb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.mad">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>mad
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.max">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>max
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.maxSorted">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>maxSorted
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.mean">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>mean
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.median">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>median
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.medianAbsoluteDeviation">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>medianAbsoluteDeviation
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.medianSorted">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>medianSorted
+            <span class="apidocSignatureSpan">(sorted)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.min">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>min
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.minSorted">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>minSorted
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.mixin">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>mixin
+            <span class="apidocSignatureSpan">(ss, array)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.mode">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>mode
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.modeFast">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>modeFast
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.modeSorted">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>modeSorted
+            <span class="apidocSignatureSpan">(sorted)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.perceptron">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>perceptron
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.permutationsHeap">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>permutationsHeap
+            <span class="apidocSignatureSpan">(elements)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.poissonDistribution">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>poissonDistribution
+            <span class="apidocSignatureSpan">(lambda)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.probit">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>probit
+            <span class="apidocSignatureSpan">(p)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.product">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>product
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.quantile">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>quantile
+            <span class="apidocSignatureSpan">(x, p)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.quantileSorted">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>quantileSorted
+            <span class="apidocSignatureSpan">(x, p)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.rSquared">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>rSquared
+            <span class="apidocSignatureSpan">(x, func)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.rms">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>rms
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.rootMeanSquare">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>rootMeanSquare
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.sample">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>sample
+            <span class="apidocSignatureSpan">( x, n, randomSource)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.sampleCorrelation">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>sampleCorrelation
+            <span class="apidocSignatureSpan">(x, y)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.sampleCovariance">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>sampleCovariance
+            <span class="apidocSignatureSpan">(x, y)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.sampleSkewness">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>sampleSkewness
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.sampleStandardDeviation">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>sampleStandardDeviation
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.sampleVariance">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>sampleVariance
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.sampleWithReplacement">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>sampleWithReplacement
+            <span class="apidocSignatureSpan">(x, n, randomSource)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.shuffle">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>shuffle
+            <span class="apidocSignatureSpan">(x, randomSource)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.shuffleInPlace">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>shuffleInPlace
+            <span class="apidocSignatureSpan">(x, randomSource)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.standardDeviation">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>standardDeviation
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.subtractFromMean">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>subtractFromMean
+            <span class="apidocSignatureSpan">(mean, n, value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.sum">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>sum
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.sumNthPowerDeviations">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>sumNthPowerDeviations
+            <span class="apidocSignatureSpan">(x, n)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.sumSimple">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>sumSimple
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.tTest">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>tTest
+            <span class="apidocSignatureSpan">(x, expectedValue)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.tTestTwoSample">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>tTestTwoSample
+            <span class="apidocSignatureSpan">( sampleX, sampleY, difference)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.uniqueCountSorted">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>uniqueCountSorted
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.variance">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>variance
+            <span class="apidocSignatureSpan">(x)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.zScore">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>zScore
+            <span class="apidocSignatureSpan">(x, mean, standardDeviation)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">simple-statistics.</span>epsilon</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">simple-statistics.</span>bayesian.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">simple-statistics.</span>perceptron.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">simple-statistics.</span>standardNormalTable</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.simple-statistics.bayesian">module simple-statistics.bayesian</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.bayesian.bayesian">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>bayesian
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.simple-statistics.bayesian.prototype">module simple-statistics.bayesian.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.bayesian.prototype.score">
+            function <span class="apidocSignatureSpan">simple-statistics.bayesian.prototype.</span>score
+            <span class="apidocSignatureSpan">(item)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.bayesian.prototype.train">
+            function <span class="apidocSignatureSpan">simple-statistics.bayesian.prototype.</span>train
+            <span class="apidocSignatureSpan">(item, category)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.simple-statistics.perceptron">module simple-statistics.perceptron</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.perceptron.perceptron">
+            function <span class="apidocSignatureSpan">simple-statistics.</span>perceptron
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.simple-statistics.perceptron.prototype">module simple-statistics.perceptron.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.perceptron.prototype.predict">
+            function <span class="apidocSignatureSpan">simple-statistics.perceptron.prototype.</span>predict
+            <span class="apidocSignatureSpan">(features)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-statistics.perceptron.prototype.train">
+            function <span class="apidocSignatureSpan">simple-statistics.perceptron.prototype.</span>train
+            <span class="apidocSignatureSpan">(features, label)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.simple-statistics" id="apidoc.module.simple-statistics">module simple-statistics</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.addToMean" id="apidoc.element.simple-statistics.addToMean">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>addToMean
+        <span class="apidocSignatureSpan">(mean, n, newValue)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function addToMean(mean, n, newValue)/*: number */ {
+    return mean + ((newValue - mean) / (n + 1));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.average" id="apidoc.element.simple-statistics.average">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>average
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function mean(x)/*:number*/ {
+    // The mean of no numbers is null
+    if (x.length === 0) {
+        throw new Error('mean requires at least one data point');
+    }
+
+    return sum(x) / x.length;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.bayesian" id="apidoc.element.simple-statistics.bayesian">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>bayesian
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function BayesianClassifier() {
+    // The number of items that are currently
+    // classified in the model
+    this.totalCount = 0;
+    // Every item classified in the model
+    this.data = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.bernoulliDistribution" id="apidoc.element.simple-statistics.bernoulliDistribution">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>bernoulliDistribution
+        <span class="apidocSignatureSpan">(p)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function bernoulliDistribution(p) {
+    // Check that `p` is a valid probability (0 â‰¤ p â‰¤ 1)
+    if (p &lt; 0 || p &gt; 1 ) {
+        throw new Error('bernoulliDistribution requires probability to be between 0 and 1 inclusive');
+    }
+
+    return binomialDistribution(1, p);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.binomialDistribution" id="apidoc.element.simple-statistics.binomialDistribution">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>binomialDistribution
+        <span class="apidocSignatureSpan">( trials, probability)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function binomialDistribution( trials, probability)/*: ?Object */ {
+    // Check that `p` is a valid probability (0 â‰¤ p â‰¤ 1),
+    // that `n` is an integer, strictly positive.
+    if (probability &lt; 0 || probability &gt; 1 ||
+        trials &lt;= 0 || trials % 1 !== 0) {
+        return undefined;
+    }
+
+    // We initialize `x`, the random variable, and `accumulator`, an accumulator
+    // for the cumulative distribution function to 0. `distribution_functions`
+    // is the object we'll return with the `probability_of_x` and the
+    // `cumulativeProbability_of_x`, as well as the calculated mean &amp;
+    // variance. We iterate until the `cumulativeProbability_of_x` is
+    // within `epsilon` of 1.0.
+    var x = 0,
+        cumulativeProbability = 0,
+        cells = {};
+
+    // This algorithm iterates through each potential outcome,
+    // until the `cumulativeProbability` is very close to 1, at
+    // which point we've defined the vast majority of outcomes
+    do {
+        // a [probability mass function](https://en.wikipedia.org/wiki/Probability_mass_function)
+        cells[x] = factorial(trials) /
+            (factorial(x) * factorial(trials - x)) *
+            (Math.pow(probability, x) * Math.pow(1 - probability, trials - x));
+        cumulativeProbability += cells[x];
+        x++;
+    // when the cumulativeProbability is nearly 1, we've calculated
+    // the useful range of this distribution
+    } while (cumulativeProbability &lt; 1 - epsilon);
+
+    return cells;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.bisect" id="apidoc.element.simple-statistics.bisect">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>bisect
+        <span class="apidocSignatureSpan">( func/*: (x: any)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function bisect( func/*: (x: any) =&gt; number */,
+    start/*: number */,
+    end/*: number */,
+    maxIterations/*: number */,
+    errorTolerance/*: number */)/*:number*/ {
+
+    if (typeof func !== 'function') throw new TypeError('func must be a function');
+
+    for (var i = 0; i &lt; maxIterations; i++) {
+        var output = (start + end) / 2;
+
+        if (func(output) === 0 || Math.abs((end - start) / 2) &lt; errorTolerance) {
+            return output;
+        }
+
+        if (sign(func(output)) === sign(func(start))) {
+            start = output;
+        } else {
+            end = output;
+        }
+    }
+
+    throw new Error('maximum number of iterations exceeded');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.chiSquaredGoodnessOfFit" id="apidoc.element.simple-statistics.chiSquaredGoodnessOfFit">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>chiSquaredGoodnessOfFit
+        <span class="apidocSignatureSpan">( data, distributionType, significance)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function chiSquaredGoodnessOfFit( data, distributionType, significance)/*: boolean */ {
+    // Estimate from the sample data, a weighted mean.
+    var inputMean = mean(data),
+        // Calculated value of the Ï‡2 statistic.
+        chiSquared = 0,
+        // Degrees of freedom, calculated as (number of class intervals -
+        // number of hypothesized distribution parameters estimated - 1)
+        degreesOfFreedom,
+        // Number of hypothesized distribution parameters estimated, expected to be supplied in the distribution test.
+        // Lose one degree of freedom for estimating `lambda` from the sample data.
+        c = 1,
+        // The hypothesized distribution.
+        // Generate the hypothesized distribution.
+        hypothesizedDistribution = distributionType(inputMean),
+        observedFrequencies = [],
+        expectedFrequencies = [],
+        k;
+
+    // Create an array holding a histogram from the sample data, of
+    // the form `{ value: numberOfOcurrences }`
+    for (var i = 0; i &lt; data.length; i++) {
+        if (observedFrequencies[data[i]] === undefined) {
+            observedFrequencies[data[i]] = 0;
+        }
+        observedFrequencies[data[i]]++;
+    }
+
+    // The histogram we created might be sparse - there might be gaps
+    // between values. So we iterate through the histogram, making
+    // sure that instead of undefined, gaps have 0 values.
+    for (i = 0; i &lt; observedFrequencies.length; i++) {
+        if (observedFrequencies[i] === undefined) {
+            observedFrequencies[i] = 0;
+        }
+    }
+
+    // Create an array holding a histogram of expected data given the
+    // sample size and hypothesized distribution.
+    for (k in hypothesizedDistribution) {
+        if (k in observedFrequencies) {
+            expectedFrequencies[+k] = hypothesizedDistribution[k] * data.length;
+        }
+    }
+
+    // Working backward through the expected frequencies, collapse classes
+    // if less than three observations are expected for a class.
+    // This transformation is applied to the observed frequencies as well.
+    for (k = expectedFrequencies.length - 1; k &gt;= 0; k--) {
+        if (expectedFrequencies[k] &lt; 3) {
+            expectedFrequencies[k - 1] += expectedFrequencies[k];
+            expectedFrequencies.pop();
+
+            observedFrequencies[k - 1] += observedFrequencies[k];
+            observedFrequencies.pop();
+        }
+    }
+
+    // Iterate through the squared differences between observed &amp; expected
+    // frequencies, accumulating the `chiSquared` statistic.
+    for (k = 0; k &lt; observedFrequencies.length; k++) {
+        chiSquared += Math.pow(
+            observedFrequencies[k] - expectedFrequencies[k], 2) /
+            expectedFrequencies[k];
+    }
+
+    // Calculate degrees of freedom for this test and look it up in the
+    // `chiSquaredDistributionTable` in order to
+    // accept or reject the goodness-of-fit of the hypothesized distribution.
+    degreesOfFreedom = observedFrequencies.length - c - 1;
+    return chiSquaredDistributionTable[degreesOfFreedom][significance] &lt; chiSquared;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * var data1019 = [
+ *     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+ *     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+ *     1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+ *     2, 2, 2, 2, 2, 2, 2, 2, 2,
+ *     3, 3, 3, 3
+ * ];
+ * ss.<span class="apidocCodeKeywordSpan">chiSquaredGoodnessOfFit</span>(data1019, ss.poissonDistribution, 0.05)); //= false
+ */
+function chiSquaredGoodnessOfFit(
+data/*: Array&lt;number&gt; */,
+distributionType/*: Function */,
+significance/*: number */)/*: boolean */ {
+// Estimate from the sample data, a weighted mean.
+var inputMean = mean(data),
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.chunk" id="apidoc.element.simple-statistics.chunk">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>chunk
+        <span class="apidocSignatureSpan">(x, chunkSize)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function chunk(x, chunkSize)/*:?Array&lt;Array&lt;any&gt;&gt;*/ {
+
+    // a list of result chunks, as arrays in an array
+    var output = [];
+
+    // `chunkSize` must be zero or higher - otherwise the loop below,
+    // in which we call `start += chunkSize`, will loop infinitely.
+    // So, we'll detect and throw in that case to indicate
+    // invalid input.
+    if (chunkSize &lt; 1) {
+        throw new Error('chunk size must be a positive number');
+    }
+
+    if (Math.floor(chunkSize) !== chunkSize) {
+        throw new Error('chunk size must be an integer');
+    }
+
+    // `start` is the index at which `.slice` will start selecting
+    // new array elements
+    for (var start = 0; start &lt; x.length; start += chunkSize) {
+
+        // for each chunk, slice that part of the array and add it
+        // to the output. The `.slice` function does not change
+        // the original array.
+        output.push(x.slice(start, start + chunkSize));
+    }
+    return output;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.ckmeans" id="apidoc.element.simple-statistics.ckmeans">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>ckmeans
+        <span class="apidocSignatureSpan">(x, nClusters)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ckmeans(x, nClusters)/*: Array&lt;Array&lt;number&gt;&gt; */ {
+
+    if (nClusters &gt; x.length) {
+        throw new Error('cannot generate more classes than there are data values');
+    }
+
+    var sorted = numericSort(x),
+        // we'll use this as the maximum number of clusters
+        uniqueCount = uniqueCountSorted(sorted);
+
+    // if all of the input values are identical, there's one cluster
+    // with all of the input in it.
+    if (uniqueCount === 1) {
+        return [sorted];
+    }
+
+    // named 'S' originally
+    var matrix = makeMatrix(nClusters, sorted.length),
+        // named 'J' originally
+        backtrackMatrix = makeMatrix(nClusters, sorted.length);
+
+    // This is a dynamic programming way to solve the problem of minimizing
+    // within-cluster sum of squares. It's similar to linear regression
+    // in this way, and this calculation incrementally computes the
+    // sum of squares that are later read.
+    fillMatrices(sorted, matrix, backtrackMatrix);
+
+    // The real work of Ckmeans clustering happens in the matrix generation:
+    // the generated matrices encode all possible clustering combinations, and
+    // once they're generated we can solve for the best clustering groups
+    // very quickly.
+    var clusters = [],
+        clusterRight = backtrackMatrix[0].length - 1;
+
+    // Backtrack the clusters from the dynamic programming matrix. This
+    // starts at the bottom-right corner of the matrix (if the top-left is 0, 0),
+    // and moves the cluster target with the loop.
+    for (var cluster = backtrackMatrix.length - 1; cluster &gt;= 0; cluster--) {
+
+        var clusterLeft = backtrackMatrix[cluster][clusterRight];
+
+        // fill the cluster from the sorted input by taking a slice of the
+        // array. the backtrack matrix makes this easy - it stores the
+        // indexes where the cluster should start and end.
+        clusters[cluster] = sorted.slice(clusterLeft, clusterRight + 1);
+
+        if (cluster &gt; 0) {
+            clusterRight = clusterLeft - 1;
+        }
+    }
+
+    return clusters;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.combinations" id="apidoc.element.simple-statistics.combinations">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>combinations
+        <span class="apidocSignatureSpan">(x, k)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function combinations(x, k) {
+    var i;
+    var subI;
+    var combinationList = [];
+    var subsetCombinations;
+    var next;
+
+    for (i = 0; i &lt; x.length; i++) {
+        if (k === 1) {
+            combinationList.push([x[i]])
+        } else {
+            subsetCombinations = combinations(x.slice( i + 1, x.length ), k - 1);
+            for (subI = 0; subI &lt; subsetCombinations.length; subI++) {
+                next = subsetCombinations[subI];
+                next.unshift(x[i]);
+                combinationList.push(next);
+            }
+        }
+    }
+    return combinationList;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.combinationsReplacement" id="apidoc.element.simple-statistics.combinationsReplacement">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>combinationsReplacement
+        <span class="apidocSignatureSpan">( x, k)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function combinationsReplacement( x, k) {
+
+    var combinationList = [];
+
+    for (var i = 0; i &lt; x.length; i++) {
+        if (k === 1) {
+            // If we're requested to find only one element, we don't need
+            // to recurse: just push `x[i]` onto the list of combinations.
+            combinationList.push([x[i]])
+        } else {
+            // Otherwise, recursively find combinations, given `k - 1`. Note that
+            // we request `k - 1`, so if you were looking for k=3 combinations, we're
+            // requesting k=2. This -1 gets reversed in the for loop right after this
+            // code, since we concatenate `x[i]` onto the selected combinations,
+            // bringing `k` back up to your requested level.
+            // This recursion may go many levels deep, since it only stops once
+            // k=1.
+            var subsetCombinations = combinationsReplacement(
+                x.slice(i, x.length),
+                k - 1);
+
+            for (var j = 0; j &lt; subsetCombinations.length; j++) {
+                combinationList.push([x[i]]
+                    .concat(subsetCombinations[j]));
+            }
+        }
+    }
+
+    return combinationList;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.combineMeans" id="apidoc.element.simple-statistics.combineMeans">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>combineMeans
+        <span class="apidocSignatureSpan">(mean1, n1, mean2, n2)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function combineMeans(mean1, n1, mean2, n2)/*: number */ {
+    return (mean1 * n1 + mean2 * n2) / (n1 + n2);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.combineVariances" id="apidoc.element.simple-statistics.combineVariances">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>combineVariances
+        <span class="apidocSignatureSpan">( variance1, mean1, n1, variance2, mean2, n2)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function combineVariances( variance1, mean1, n1, variance2, mean2, n2)/*: number */ {
+
+    var newMean = combineMeans(mean1, n1, mean2, n2);
+
+    return (
+      n1 * (variance1 + Math.pow(mean1 - newMean, 2)) +
+      n2 * (variance2 + Math.pow(mean2 - newMean, 2))
+    ) / (n1 + n2);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.cumulativeStdNormalProbability" id="apidoc.element.simple-statistics.cumulativeStdNormalProbability">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>cumulativeStdNormalProbability
+        <span class="apidocSignatureSpan">(z)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function cumulativeStdNormalProbability(z)/*:number */ {
+
+    // Calculate the position of this value.
+    var absZ = Math.abs(z),
+        // Each row begins with a different
+        // significant digit: 0.5, 0.6, 0.7, and so on. Each value in the table
+        // corresponds to a range of 0.01 in the input values, so the value is
+        // multiplied by 100.
+        index = Math.min(Math.round(absZ * 100), standardNormalTable.length - 1);
+
+    // The index we calculate must be in the table as a positive value,
+    // but we still pay attention to whether the input is positive
+    // or negative, and flip the output value as a last step.
+    if (z &gt;= 0) {
+        return standardNormalTable[index];
+    } else {
+        // due to floating-point arithmetic, values in the table with
+        // 4 significant figures can nevertheless end up as repeating
+        // fractions when they're computed here.
+        return +(1 - standardNormalTable[index]).toFixed(4);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.equalIntervalBreaks" id="apidoc.element.simple-statistics.equalIntervalBreaks">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>equalIntervalBreaks
+        <span class="apidocSignatureSpan">(x, nClasses)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function equalIntervalBreaks(x, nClasses)/*: Array&lt;number&gt; */ {
+
+    if (x.length &lt; 2) {
+        return x;
+    }
+
+    var theMin = min(x),
+        theMax = max(x);
+
+    // the first break will always be the minimum value
+    // in the xset
+    var breaks = [theMin];
+
+    // The size of each break is the full range of the x
+    // divided by the number of classes requested
+    var breakSize = (theMax - theMin) / nClasses;
+
+    // In the case of nClasses = 1, this loop won't run
+    // and the returned breaks will be [min, max]
+    for (var i = 1; i &lt; nClasses; i++) {
+        breaks.push(breaks[0] + breakSize * i);
+    }
+
+    // the last break will always be the
+    // maximum.
+    breaks.push(theMax);
+
+    return breaks;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.erf" id="apidoc.element.simple-statistics.erf">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>erf
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function errorFunction(x)/*: number */ {
+    var t = 1 / (1 + 0.5 * Math.abs(x));
+    var tau = t * Math.exp(-Math.pow(x, 2) -
+        1.26551223 +
+        1.00002368 * t +
+        0.37409196 * Math.pow(t, 2) +
+        0.09678418 * Math.pow(t, 3) -
+        0.18628806 * Math.pow(t, 4) +
+        0.27886807 * Math.pow(t, 5) -
+        1.13520398 * Math.pow(t, 6) +
+        1.48851587 * Math.pow(t, 7) -
+        0.82215223 * Math.pow(t, 8) +
+        0.17087277 * Math.pow(t, 9));
+    if (x &gt;= 0) {
+        return 1 - tau;
+    } else {
+        return tau - 1;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.errorFunction" id="apidoc.element.simple-statistics.errorFunction">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>errorFunction
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function errorFunction(x)/*: number */ {
+    var t = 1 / (1 + 0.5 * Math.abs(x));
+    var tau = t * Math.exp(-Math.pow(x, 2) -
+        1.26551223 +
+        1.00002368 * t +
+        0.37409196 * Math.pow(t, 2) +
+        0.09678418 * Math.pow(t, 3) -
+        0.18628806 * Math.pow(t, 4) +
+        0.27886807 * Math.pow(t, 5) -
+        1.13520398 * Math.pow(t, 6) +
+        1.48851587 * Math.pow(t, 7) -
+        0.82215223 * Math.pow(t, 8) +
+        0.17087277 * Math.pow(t, 9));
+    if (x &gt;= 0) {
+        return 1 - tau;
+    } else {
+        return tau - 1;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.factorial" id="apidoc.element.simple-statistics.factorial">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>factorial
+        <span class="apidocSignatureSpan">(n)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function factorial(n)/*: number */ {
+
+    // factorial is mathematically undefined for negative numbers
+    if (n &lt; 0) {
+        throw new Error('factorial requires an integer input');
+    }
+
+    if (Math.floor(n) !== n) {
+        throw new Error('factorial requires a non-negative value');
+    }
+
+    // typically you'll expand the factorial function going down, like
+    // 5! = 5 * 4 * 3 * 2 * 1. This is going in the opposite direction,
+    // counting from 2 up to the number in question, and since anything
+    // multiplied by 1 is itself, the loop only needs to start at 2.
+    var accumulator = 1;
+    for (var i = 2; i &lt;= n; i++) {
+        // for each number up to and including the number `n`, multiply
+        // the accumulator my that number.
+        accumulator *= i;
+    }
+    return accumulator;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.geometricMean" id="apidoc.element.simple-statistics.geometricMean">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>geometricMean
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function geometricMean(x) {
+    // The mean of no numbers is null
+    if (x.length === 0) {
+        throw new Error('geometricMean requires at least one data point');
+    }
+
+    // the starting value.
+    var value = 1;
+
+    for (var i = 0; i &lt; x.length; i++) {
+        // the geometric mean is only valid for positive numbers
+        if (x[i] &lt;= 0) {
+            throw new Error('geometricMean requires only positive numbers as input');
+        }
+
+        // repeatedly multiply the value by each number
+        value *= x[i];
+    }
+
+    return Math.pow(value, 1 / x.length);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.harmonicMean" id="apidoc.element.simple-statistics.harmonicMean">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>harmonicMean
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function harmonicMean(x) {
+    // The mean of no numbers is null
+    if (x.length === 0) {
+        throw new Error('harmonicMean requires at least one data point');
+    }
+
+    var reciprocalSum = 0;
+
+    for (var i = 0; i &lt; x.length; i++) {
+        // the harmonic mean is only valid for positive numbers
+        if (x[i] &lt;= 0) {
+            throw new Error('harmonicMean requires only positive numbers as input');
+        }
+
+        reciprocalSum += 1 / x[i];
+    }
+
+    // divide n by the the reciprocal sum
+    return x.length / reciprocalSum;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.interquartileRange" id="apidoc.element.simple-statistics.interquartileRange">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>interquartileRange
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function interquartileRange(x) {
+    // Interquartile range is the span between the upper quartile,
+    // at `0.75`, and lower quartile, `0.25`
+    var q1 = quantile(x, 0.75),
+        q2 = quantile(x, 0.25);
+
+    if (typeof q1 === 'number' &amp;&amp; typeof q2 === 'number') {
+        return q1 - q2;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.inverseErrorFunction" id="apidoc.element.simple-statistics.inverseErrorFunction">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>inverseErrorFunction
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function inverseErrorFunction(x)/*: number */ {
+    var a = (8 * (Math.PI - 3)) / (3 * Math.PI * (4 - Math.PI));
+
+    var inv = Math.sqrt(Math.sqrt(
+        Math.pow(2 / (Math.PI * a) + Math.log(1 - x * x) / 2, 2) -
+        Math.log(1 - x * x) / a) -
+        (2 / (Math.PI * a) + Math.log(1 - x * x) / 2));
+
+    if (x &gt;= 0) {
+        return inv;
+    } else {
+        return -inv;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.iqr" id="apidoc.element.simple-statistics.iqr">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>iqr
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function interquartileRange(x) {
+    // Interquartile range is the span between the upper quartile,
+    // at `0.75`, and lower quartile, `0.25`
+    var q1 = quantile(x, 0.75),
+        q2 = quantile(x, 0.25);
+
+    if (typeof q1 === 'number' &amp;&amp; typeof q2 === 'number') {
+        return q1 - q2;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.linearRegression" id="apidoc.element.simple-statistics.linearRegression">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>linearRegression
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function linearRegression(data)/*: { m: number, b: number } */ {
+
+    var m, b;
+
+    // Store data length in a local variable to reduce
+    // repeated object property lookups
+    var dataLength = data.length;
+
+    //if there's only one point, arbitrarily choose a slope of 0
+    //and a y-intercept of whatever the y of the initial point is
+    if (dataLength === 1) {
+        m = 0;
+        b = data[0][1];
+    } else {
+        // Initialize our sums and scope the `m` and `b`
+        // variables that define the line.
+        var sumX = 0, sumY = 0,
+            sumXX = 0, sumXY = 0;
+
+        // Use local variables to grab point values
+        // with minimal object property lookups
+        var point, x, y;
+
+        // Gather the sum of all x values, the sum of all
+        // y values, and the sum of x^2 and (x*y) for each
+        // value.
+        //
+        // In math notation, these would be SS_x, SS_y, SS_xx, and SS_xy
+        for (var i = 0; i &lt; dataLength; i++) {
+            point = data[i];
+            x = point[0];
+            y = point[1];
+
+            sumX += x;
+            sumY += y;
+
+            sumXX += x * x;
+            sumXY += x * y;
+        }
+
+        // `m` is the slope of the regression line
+        m = ((dataLength * sumXY) - (sumX * sumY)) /
+            ((dataLength * sumXX) - (sumX * sumX));
+
+        // `b` is the y-intercept of the line.
+        b = (sumY / dataLength) - ((m * sumX) / dataLength);
+    }
+
+    // Return both values as an object.
+    return {
+        m: m,
+        b: b
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.linearRegressionLine" id="apidoc.element.simple-statistics.linearRegressionLine">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>linearRegressionLine
+        <span class="apidocSignatureSpan">(mb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function linearRegressionLine(mb)/*: Function */ {
+    // Return a function that computes a `y` value for each
+    // x value it is given, based on the values of `b` and `a`
+    // that we just computed.
+    return function(x) {
+        return mb.b + (mb.m * x);
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.mad" id="apidoc.element.simple-statistics.mad">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>mad
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function medianAbsoluteDeviation(x) {
+    // The mad of nothing is null
+    var medianValue = median(x),
+        medianAbsoluteDeviations = [];
+
+    // Make a list of absolute deviations from the median
+    for (var i = 0; i &lt; x.length; i++) {
+        medianAbsoluteDeviations.push(Math.abs(x[i] - medianValue));
+    }
+
+    // Find the median value of that list
+    return median(medianAbsoluteDeviations);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.max" id="apidoc.element.simple-statistics.max">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>max
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function max(x) /*:number*/ {
+    var value;
+    for (var i = 0; i &lt; x.length; i++) {
+        // On the first iteration of this loop, max is
+        // undefined and is thus made the maximum element in the array
+        if (value === undefined || x[i] &gt; value) {
+            value = x[i];
+        }
+    }
+    if (value === undefined) {
+        throw new Error('max requires at least one data point');
+    }
+    return value;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+matrix[cluster][i] = matrix[cluster - 1][i - 1];
+backtrackMatrix[cluster][i] = i;
+
+var jlow = cluster; // the lower end for j
+
+if (iMin &gt; cluster) {
+    jlow = Math.<span class="apidocCodeKeywordSpan">max</span>(jlow, backtrackMatrix[cluster][iMin - 1] || 0);
+}
+jlow = Math.max(jlow, backtrackMatrix[cluster - 1][i] || 0);
+
+var jhigh = i - 1; // the upper end for j
+if (iMax &lt; matrix.length - 1) {
+    jhigh = Math.min(jhigh, backtrackMatrix[cluster][iMax + 1] || 0);
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.maxSorted" id="apidoc.element.simple-statistics.maxSorted">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>maxSorted
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function maxSorted(x)/*:number*/ {
+    return x[x.length - 1];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.mean" id="apidoc.element.simple-statistics.mean">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>mean
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function mean(x)/*:number*/ {
+    // The mean of no numbers is null
+    if (x.length === 0) {
+        throw new Error('mean requires at least one data point');
+    }
+
+    return sum(x) / x.length;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.median" id="apidoc.element.simple-statistics.median">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>median
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function median(x)/*:number*/ {
+    return +quantile(x, 0.5);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.medianAbsoluteDeviation" id="apidoc.element.simple-statistics.medianAbsoluteDeviation">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>medianAbsoluteDeviation
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function medianAbsoluteDeviation(x) {
+    // The mad of nothing is null
+    var medianValue = median(x),
+        medianAbsoluteDeviations = [];
+
+    // Make a list of absolute deviations from the median
+    for (var i = 0; i &lt; x.length; i++) {
+        medianAbsoluteDeviations.push(Math.abs(x[i] - medianValue));
+    }
+
+    // Find the median value of that list
+    return median(medianAbsoluteDeviations);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.medianSorted" id="apidoc.element.simple-statistics.medianSorted">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>medianSorted
+        <span class="apidocSignatureSpan">(sorted)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function medianSorted(sorted)/*:number*/ {
+    return quantileSorted(sorted, 0.5);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.min" id="apidoc.element.simple-statistics.min">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>min
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function min(x)/*:number*/ {
+    var value;
+    for (var i = 0; i &lt; x.length; i++) {
+        // On the first iteration of this loop, min is
+        // undefined and is thus made the minimum element in the array
+        if (value === undefined || x[i] &lt; value) {
+            value = x[i];
+        }
+    }
+    if (value === undefined) {
+        throw new Error('min requires at least one data point');
+    }
+    return value;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if (iMin &gt; cluster) {
+    jlow = Math.max(jlow, backtrackMatrix[cluster][iMin - 1] || 0);
+}
+jlow = Math.max(jlow, backtrackMatrix[cluster - 1][i] || 0);
+
+var jhigh = i - 1; // the upper end for j
+if (iMax &lt; matrix.length - 1) {
+    jhigh = Math.<span class="apidocCodeKeywordSpan">min</span>(jhigh, backtrackMatrix[cluster][iMax + 1] || 0);
+}
+
+var sji;
+var sjlowi;
+var ssqjlow;
+var ssqj;
+for (var j = jhigh; j &gt;= jlow; --j) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.minSorted" id="apidoc.element.simple-statistics.minSorted">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>minSorted
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function minSorted(x)/*:number*/ {
+    return x[0];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.mixin" id="apidoc.element.simple-statistics.mixin">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>mixin
+        <span class="apidocSignatureSpan">(ss, array)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function mixin(ss, array)<span class="apidocCodeCommentSpan">/*: any */ {
+    var support = !!(Object.defineProperty &amp;&amp; Object.defineProperties);
+    // Coverage testing will never test this error.
+    /* istanbul ignore next */
+</span>    if (!support) {
+        throw new Error('without defineProperty, simple-statistics cannot be mixed in');
+    }
+
+    // only methods which work on basic arrays in a single step
+    // are supported
+    var arrayMethods = ['median', 'standardDeviation', 'sum', 'product',
+        'sampleSkewness',
+        'mean', 'min', 'max', 'quantile', 'geometricMean',
+        'harmonicMean', 'root_mean_square'];
+
+    // create a closure with a method name so that a reference
+    // like `arrayMethods[i]` doesn't follow the loop increment
+    function wrap(method) {
+        return function() {
+            // cast any arguments into an array, since they're
+            // natively objects
+            var args = Array.prototype.slice.apply(arguments);
+            // make the first argument the array itself
+            args.unshift(this);
+            // return the result of the ss method
+            return ss[method].apply(ss, args);
+        };
+    }
+
+    // select object to extend
+    var extending;
+    if (array) {
+        // create a shallow copy of the array so that our internal
+        // operations do not change it by reference
+        extending = array.slice();
+    } else {
+        extending = Array.prototype;
+    }
+
+    // for each array function, define a function that gets
+    // the array as the first argument.
+    // We use [defineProperty](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Object/defineProperty
+)
+    // because it allows these properties to be non-enumerable:
+    // `for (var in x)` loops will not run into problems with this
+    // implementation.
+    for (var i = 0; i &lt; arrayMethods.length; i++) {
+        Object.defineProperty(extending, arrayMethods[i], {
+            value: wrap(arrayMethods[i]),
+            configurable: true,
+            enumerable: false,
+            writable: true
+        });
+    }
+
+    return extending;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.mode" id="apidoc.element.simple-statistics.mode">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>mode
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function mode(x)/*:number*/ {
+    // Sorting the array lets us iterate through it below and be sure
+    // that every time we see a new number it's new and we'll never
+    // see the same number twice
+    return modeSorted(numericSort(x));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.modeFast" id="apidoc.element.simple-statistics.modeFast">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>modeFast
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function modeFast(x)/*: ?T */ {
+
+    // This index will reflect the incidence of different values, indexing
+    // them like
+    // { value: count }
+    var index = new Map();
+
+    // A running `mode` and the number of times it has been encountered.
+    var mode;
+    var modeCount = 0;
+
+    for (var i = 0; i &lt; x.length; i++) {
+        var newCount = index.get(x[i]);
+        if (newCount === undefined) {
+            newCount = 1;
+        } else {
+            newCount++;
+        }
+        if (newCount &gt; modeCount) {
+            mode = x[i];
+            modeCount = newCount;
+        }
+        index.set(x[i], newCount);
+    }
+
+    if (modeCount === 0) {
+        throw new Error('mode requires at last one data point');
+    }
+
+    return mode;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.modeSorted" id="apidoc.element.simple-statistics.modeSorted">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>modeSorted
+        <span class="apidocSignatureSpan">(sorted)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function modeSorted(sorted)/*:number*/ {
+
+    // Handle edge cases:
+    // The mode of an empty list is undefined
+    if (sorted.length === 0) {
+        throw new Error('mode requires at least one data point');
+    } else if (sorted.length === 1) {
+        return sorted[0];
+    }
+
+    // This assumes it is dealing with an array of size &gt; 1, since size
+    // 0 and 1 are handled immediately. Hence it starts at index 1 in the
+    // array.
+    var last = sorted[0],
+        // store the mode as we find new modes
+        value = NaN,
+        // store how many times we've seen the mode
+        maxSeen = 0,
+        // how many times the current candidate for the mode
+        // has been seen
+        seenThis = 1;
+
+    // end at sorted.length + 1 to fix the case in which the mode is
+    // the highest number that occurs in the sequence. the last iteration
+    // compares sorted[i], which is undefined, to the highest number
+    // in the series
+    for (var i = 1; i &lt; sorted.length + 1; i++) {
+        // we're seeing a new number pass by
+        if (sorted[i] !== last) {
+            // the last number is the new mode since we saw it more
+            // often than the old one
+            if (seenThis &gt; maxSeen) {
+                maxSeen = seenThis;
+                value = last;
+            }
+            seenThis = 1;
+            last = sorted[i];
+        // if this isn't a new number, it's one more occurrence of
+        // the potential mode
+        } else { seenThis++; }
+    }
+    return value;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.perceptron" id="apidoc.element.simple-statistics.perceptron">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>perceptron
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function PerceptronModel() {
+    // The weights, or coefficients of the model;
+    // weights are only populated when training with data.
+    this.weights = [];
+    // The bias term, or intercept; it is also a weight but
+    // it's stored separately for convenience as it is always
+    // multiplied by one.
+    this.bias = 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.permutationsHeap" id="apidoc.element.simple-statistics.permutationsHeap">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>permutationsHeap
+        <span class="apidocSignatureSpan">(elements)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function permutationsHeap(elements)/*: Array&lt;Array&lt;T&gt;&gt; */ {
+    var indexes = new Array(elements.length);
+    var permutations = [elements.slice()];
+
+    for (var i = 0; i &lt; elements.length; i++) {
+        indexes[i] = 0;
+    }
+
+    for (i = 0; i &lt; elements.length;) {
+        if (indexes[i] &lt; i) {
+
+            // At odd indexes, swap from indexes[i] instead
+            // of from the beginning of the array
+            var swapFrom = 0;
+            if (i % 2 !== 0) {
+                swapFrom = indexes[i];
+            }
+
+            // swap between swapFrom and i, using
+            // a temporary variable as storage.
+            var temp = elements[swapFrom];
+            elements[swapFrom] = elements[i];
+            elements[i] = temp;
+
+            permutations.push(elements.slice());
+            indexes[i]++;
+            i = 0;
+
+        } else {
+            indexes[i] = 0;
+            i++;
+        }
+    }
+
+    return permutations;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.poissonDistribution" id="apidoc.element.simple-statistics.poissonDistribution">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>poissonDistribution
+        <span class="apidocSignatureSpan">(lambda)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function poissonDistribution(lambda) {
+    // Check that lambda is strictly positive
+    if (lambda &lt;= 0) { return undefined; }
+
+    // our current place in the distribution
+    var x = 0,
+        // and we keep track of the current cumulative probability, in
+        // order to know when to stop calculating chances.
+        cumulativeProbability = 0,
+        // the calculated cells to be returned
+        cells = {};
+
+    // This algorithm iterates through each potential outcome,
+    // until the `cumulativeProbability` is very close to 1, at
+    // which point we've defined the vast majority of outcomes
+    do {
+        // a [probability mass function](https://en.wikipedia.org/wiki/Probability_mass_function)
+        cells[x] = (Math.pow(Math.E, -lambda) * Math.pow(lambda, x)) / factorial(x);
+        cumulativeProbability += cells[x];
+        x++;
+    // when the cumulativeProbability is nearly 1, we've calculated
+    // the useful range of this distribution
+    } while (cumulativeProbability &lt; 1 - epsilon);
+
+    return cells;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.probit" id="apidoc.element.simple-statistics.probit">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>probit
+        <span class="apidocSignatureSpan">(p)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function probit(p)/*: number */ {
+    if (p === 0) {
+        p = epsilon;
+    } else if (p &gt;= 1) {
+        p = 1 - epsilon;
+    }
+    return Math.sqrt(2) * inverseErrorFunction(2 * p - 1);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.product" id="apidoc.element.simple-statistics.product">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>product
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function product(x)/*: number */ {
+    var value = 1;
+    for (var i = 0; i &lt; x.length; i++) {
+        value *= x[i];
+    }
+    return value;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.quantile" id="apidoc.element.simple-statistics.quantile">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>quantile
+        <span class="apidocSignatureSpan">(x, p)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function quantile(x, p) {
+    var copy = x.slice();
+
+    if (Array.isArray(p)) {
+        // rearrange elements so that each element corresponding to a requested
+        // quantile is on a place it would be if the array was fully sorted
+        multiQuantileSelect(copy, p);
+        // Initialize the result array
+        var results = [];
+        // For each requested quantile
+        for (var i = 0; i &lt; p.length; i++) {
+            results[i] = quantileSorted(copy, p[i]);
+        }
+        return results;
+    } else {
+        var idx = quantileIndex(copy.length, p);
+        quantileSelect(copy, idx, 0, copy.length - 1);
+        return quantileSorted(copy, p);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.quantileSorted" id="apidoc.element.simple-statistics.quantileSorted">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>quantileSorted
+        <span class="apidocSignatureSpan">(x, p)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function quantileSorted(x, p)/*:number*/ {
+    var idx = x.length * p;
+    if (x.length === 0) {
+        throw new Error('quantile requires at least one data point.');
+    } else if (p &lt; 0 || p &gt; 1) {
+        throw new Error('quantiles must be between 0 and 1');
+    } else if (p === 1) {
+        // If p is 1, directly return the last element
+        return x[x.length - 1];
+    } else if (p === 0) {
+        // If p is 0, directly return the first element
+        return x[0];
+    } else if (idx % 1 !== 0) {
+        // If p is not integer, return the next element in array
+        return x[Math.ceil(idx) - 1];
+    } else if (x.length % 2 === 0) {
+        // If the list has even-length, we'll take the average of this number
+        // and the next value, if there is one
+        return (x[idx - 1] + x[idx]) / 2;
+    } else {
+        // Finally, in the simple case of an integer value
+        // with an odd-length list, return the x value at the index.
+        return x[idx];
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.rSquared" id="apidoc.element.simple-statistics.rSquared">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>rSquared
+        <span class="apidocSignatureSpan">(x, func)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function rSquared(x, func) /*: number */ {
+    if (x.length &lt; 2) { return 1; }
+
+    // Compute the average y value for the actual
+    // data set in order to compute the
+    // _total sum of squares_
+    var sum = 0, average;
+    for (var i = 0; i &lt; x.length; i++) {
+        sum += x[i][1];
+    }
+    average = sum / x.length;
+
+    // Compute the total sum of squares - the
+    // squared difference between each point
+    // and the average of all points.
+    var sumOfSquares = 0;
+    for (var j = 0; j &lt; x.length; j++) {
+        sumOfSquares += Math.pow(average - x[j][1], 2);
+    }
+
+    // Finally estimate the error: the squared
+    // difference between the estimate and the actual data
+    // value at each point.
+    var err = 0;
+    for (var k = 0; k &lt; x.length; k++) {
+        err += Math.pow(x[k][1] - func(x[k][0]), 2);
+    }
+
+    // As the error grows larger, its ratio to the
+    // sum of squares increases and the r squared
+    // value grows lower.
+    return 1 - err / sumOfSquares;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.rms" id="apidoc.element.simple-statistics.rms">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>rms
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function rootMeanSquare(x)/*:number*/ {
+    if (x.length === 0) {
+        throw new Error('rootMeanSquare requires at least one data point');
+    }
+
+    var sumOfSquares = 0;
+    for (var i = 0; i &lt; x.length; i++) {
+        sumOfSquares += Math.pow(x[i], 2);
+    }
+
+    return Math.sqrt(sumOfSquares / x.length);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.rootMeanSquare" id="apidoc.element.simple-statistics.rootMeanSquare">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>rootMeanSquare
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function rootMeanSquare(x)/*:number*/ {
+    if (x.length === 0) {
+        throw new Error('rootMeanSquare requires at least one data point');
+    }
+
+    var sumOfSquares = 0;
+    for (var i = 0; i &lt; x.length; i++) {
+        sumOfSquares += Math.pow(x[i], 2);
+    }
+
+    return Math.sqrt(sumOfSquares / x.length);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.sample" id="apidoc.element.simple-statistics.sample">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>sample
+        <span class="apidocSignatureSpan">( x, n, randomSource)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function sample( x, n, randomSource) /*: Array&lt;T&gt; */ {
+    // shuffle the original array using a fisher-yates shuffle
+    var shuffled = shuffle(x, randomSource);
+
+    // and then return a subset of it - the first `n` elements.
+    return shuffled.slice(0, n);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.sampleCorrelation" id="apidoc.element.simple-statistics.sampleCorrelation">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>sampleCorrelation
+        <span class="apidocSignatureSpan">(x, y)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function sampleCorrelation(x, y)/*:number*/ {
+    var cov = sampleCovariance(x, y),
+        xstd = sampleStandardDeviation(x),
+        ystd = sampleStandardDeviation(y);
+
+    return cov / xstd / ystd;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.sampleCovariance" id="apidoc.element.simple-statistics.sampleCovariance">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>sampleCovariance
+        <span class="apidocSignatureSpan">(x, y)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function sampleCovariance(x, y)/*:number*/ {
+
+    // The two datasets must have the same length which must be more than 1
+    if (x.length !== y.length) {
+        throw new Error('sampleCovariance requires samples with equal lengths');
+    }
+
+    if (x.length &lt; 2) {
+        throw new Error('sampleCovariance requires at least two data points in each sample');
+    }
+
+    // determine the mean of each dataset so that we can judge each
+    // value of the dataset fairly as the difference from the mean. this
+    // way, if one dataset is [1, 2, 3] and [2, 3, 4], their covariance
+    // does not suffer because of the difference in absolute values
+    var xmean = mean(x),
+        ymean = mean(y),
+        sum = 0;
+
+    // for each pair of values, the covariance increases when their
+    // difference from the mean is associated - if both are well above
+    // or if both are well below
+    // the mean, the covariance increases significantly.
+    for (var i = 0; i &lt; x.length; i++) {
+        sum += (x[i] - xmean) * (y[i] - ymean);
+    }
+
+    // this is Bessels' Correction: an adjustment made to sample statistics
+    // that allows for the reduced degree of freedom entailed in calculating
+    // values from samples rather than complete populations.
+    var besselsCorrection = x.length - 1;
+
+    // the covariance is weighted by the length of the datasets.
+    return sum / besselsCorrection;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.sampleSkewness" id="apidoc.element.simple-statistics.sampleSkewness">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>sampleSkewness
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function sampleSkewness(x)/*:number*/ {
+    // The skewness of less than three arguments is null
+    var theSampleStandardDeviation = sampleStandardDeviation(x);
+
+    if (x.length &lt; 3) {
+        throw new Error('sampleSkewness requires at least three data points');
+    }
+
+    var n = x.length,
+        cubedS = Math.pow(theSampleStandardDeviation, 3),
+        sumCubedDeviations = sumNthPowerDeviations(x, 3);
+
+    return n * sumCubedDeviations / ((n - 1) * (n - 2) * cubedS);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.sampleStandardDeviation" id="apidoc.element.simple-statistics.sampleStandardDeviation">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>sampleStandardDeviation
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function sampleStandardDeviation(x)/*:number*/ {
+    // The standard deviation of no numbers is null
+    var sampleVarianceX = sampleVariance(x);
+    return Math.sqrt(sampleVarianceX);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.sampleVariance" id="apidoc.element.simple-statistics.sampleVariance">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>sampleVariance
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function sampleVariance(x)/*:number*/ {
+    // The variance of no numbers is null
+    if (x.length &lt; 2) {
+        throw new Error('sampleVariance requires at least two data points');
+    }
+
+    var sumSquaredDeviationsValue = sumNthPowerDeviations(x, 2);
+
+    // this is Bessels' Correction: an adjustment made to sample statistics
+    // that allows for the reduced degree of freedom entailed in calculating
+    // values from samples rather than complete populations.
+    var besselsCorrection = x.length - 1;
+
+    // Find the mean value of that list
+    return sumSquaredDeviationsValue / besselsCorrection;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.sampleWithReplacement" id="apidoc.element.simple-statistics.sampleWithReplacement">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>sampleWithReplacement
+        <span class="apidocSignatureSpan">(x, n, randomSource)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function sampleWithReplacement(x, n, randomSource) {
+
+    if (x.length === 0) {
+        return [];
+    }
+
+    // a custom random number source can be provided if you want to use
+    // a fixed seed or another random number generator, like
+    // [random-js](https://www.npmjs.org/package/random-js)
+    randomSource = randomSource || Math.random;
+
+    var length = x.length;
+    var sample = [];
+
+    for (var i = 0; i &lt; n; i++) {
+        var index = Math.floor(randomSource() * length);
+
+        sample.push(x[index]);
+    }
+
+    return sample;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.shuffle" id="apidoc.element.simple-statistics.shuffle">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>shuffle
+        <span class="apidocSignatureSpan">(x, randomSource)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function shuffle(x, randomSource) {
+    // slice the original array so that it is not modified
+    var sample = x.slice();
+
+    // and then shuffle that shallow-copied array, in place
+    return shuffleInPlace(sample.slice(), randomSource);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.shuffleInPlace" id="apidoc.element.simple-statistics.shuffleInPlace">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>shuffleInPlace
+        <span class="apidocSignatureSpan">(x, randomSource)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function shuffleInPlace(x, randomSource)/*:Array&lt;any&gt;*/ {
+
+    // a custom random number source can be provided if you want to use
+    // a fixed seed or another random number generator, like
+    // [random-js](https://www.npmjs.org/package/random-js)
+    randomSource = randomSource || Math.random;
+
+    // store the current length of the x to determine
+    // when no elements remain to shuffle.
+    var length = x.length;
+
+    // temporary is used to hold an item when it is being
+    // swapped between indices.
+    var temporary;
+
+    // The index to swap at each stage.
+    var index;
+
+    // While there are still items to shuffle
+    while (length &gt; 0) {
+        // chose a random index within the subset of the array
+        // that is not yet shuffled
+        index = Math.floor(randomSource() * length--);
+
+        // store the value that we'll move temporarily
+        temporary = x[length];
+
+        // swap the value at `x[length]` with `x[index]`
+        x[length] = x[index];
+        x[index] = temporary;
+    }
+
+    return x;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.standardDeviation" id="apidoc.element.simple-statistics.standardDeviation">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>standardDeviation
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function standardDeviation(x)/*:number*/ {
+    if (x.length === 1) {
+        return 0;
+    }
+    var v = variance(x);
+    return Math.sqrt(v);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.subtractFromMean" id="apidoc.element.simple-statistics.subtractFromMean">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>subtractFromMean
+        <span class="apidocSignatureSpan">(mean, n, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function subtractFromMean(mean, n, value)/*: number */ {
+    return ((mean * n) - value) / (n - 1);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.sum" id="apidoc.element.simple-statistics.sum">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>sum
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function sum(x)/*: number */ {
+
+    // like the traditional sum algorithm, we keep a running
+    // count of the current sum.
+    var sum = 0;
+
+    // but we also keep three extra variables as bookkeeping:
+    // most importantly, an error correction value. This will be a very
+    // small number that is the opposite of the floating point precision loss.
+    var errorCompensation = 0;
+
+    // this will be each number in the list corrected with the compensation value.
+    var correctedCurrentValue;
+
+    // and this will be the next sum
+    var nextSum;
+
+    for (var i = 0; i &lt; x.length; i++) {
+        // first correct the value that we're going to add to the sum
+        correctedCurrentValue = x[i] - errorCompensation;
+
+        // compute the next sum. sum is likely a much larger number
+        // than correctedCurrentValue, so we'll lose precision here,
+        // and measure how much precision is lost in the next step
+        nextSum = sum + correctedCurrentValue;
+
+        // we intentionally didn't assign sum immediately, but stored
+        // it for now so we can figure out this: is (sum + nextValue) - nextValue
+        // not equal to 0? ideally it would be, but in practice it won't:
+        // it will be some very small number. that's what we record
+        // as errorCompensation.
+        errorCompensation = nextSum - sum - correctedCurrentValue;
+
+        // now that we've computed how much we'll correct for in the next
+        // loop, start treating the nextSum as the current sum.
+        sum = nextSum;
+    }
+
+    return sum;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @throws {Error} if the JavaScript environment doesn't support Object.defineProperty
+ * @returns {*} the extended Array, or Array.prototype if no object
+ * is given.
+ *
+ * @example
+ * var myNumbers = [1, 2, 3];
+ * mixin(ss, myNumbers);
+ * console.log(myNumbers.<span class="apidocCodeKeywordSpan">sum</span>()); // 6
+ */
+function mixin(ss /*: Object */, array /*: ?Array&lt;any&gt; */)/*: any */ {
+var support = !!(Object.defineProperty &amp;&amp; Object.defineProperties);
+// Coverage testing will never test this error.
+/* istanbul ignore next */
+if (!support) {
+    throw new Error('without defineProperty, simple-statistics cannot be mixed in');
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.sumNthPowerDeviations" id="apidoc.element.simple-statistics.sumNthPowerDeviations">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>sumNthPowerDeviations
+        <span class="apidocSignatureSpan">(x, n)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function sumNthPowerDeviations(x, n)/*:number*/ {
+    var meanValue = mean(x),
+        sum = 0;
+
+    for (var i = 0; i &lt; x.length; i++) {
+        sum += Math.pow(x[i] - meanValue, n);
+    }
+
+    return sum;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.sumSimple" id="apidoc.element.simple-statistics.sumSimple">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>sumSimple
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function sumSimple(x)/*: number */ {
+    var value = 0;
+    for (var i = 0; i &lt; x.length; i++) {
+        value += x[i];
+    }
+    return value;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.tTest" id="apidoc.element.simple-statistics.tTest">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>tTest
+        <span class="apidocSignatureSpan">(x, expectedValue)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function tTest(x, expectedValue)/*:number*/ {
+    // The mean of the sample
+    var sampleMean = mean(x);
+
+    // The standard deviation of the sample
+    var sd = standardDeviation(x);
+
+    // Square root the length of the sample
+    var rootN = Math.sqrt(x.length);
+
+    // returning the t value
+    return (sampleMean - expectedValue) / (sd / rootN);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.tTestTwoSample" id="apidoc.element.simple-statistics.tTestTwoSample">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>tTestTwoSample
+        <span class="apidocSignatureSpan">( sampleX, sampleY, difference)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function tTestTwoSample( sampleX, sampleY, difference) {
+    var n = sampleX.length,
+        m = sampleY.length;
+
+    // If either sample doesn't actually have any values, we can't
+    // compute this at all, so we return `null`.
+    if (!n || !m) { return null; }
+
+    // default difference (mu) is zero
+    if (!difference) {
+        difference = 0;
+    }
+
+    var meanX = mean(sampleX),
+        meanY = mean(sampleY),
+        sampleVarianceX = sampleVariance(sampleX),
+        sampleVarianceY = sampleVariance(sampleY);
+
+    if (typeof meanX === 'number' &amp;&amp;
+        typeof meanY === 'number' &amp;&amp;
+        typeof sampleVarianceX === 'number' &amp;&amp;
+        typeof sampleVarianceY === 'number') {
+        var weightedVariance = ((n - 1) * sampleVarianceX +
+            (m - 1) * sampleVarianceY) / (n + m - 2);
+
+        return (meanX - meanY - difference) /
+            Math.sqrt(weightedVariance * (1 / n + 1 / m));
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.uniqueCountSorted" id="apidoc.element.simple-statistics.uniqueCountSorted">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>uniqueCountSorted
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function uniqueCountSorted(x)/*: number */ {
+    var uniqueValueCount = 0,
+        lastSeenValue;
+    for (var i = 0; i &lt; x.length; i++) {
+        if (i === 0 || x[i] !== lastSeenValue) {
+            lastSeenValue = x[i];
+            uniqueValueCount++;
+        }
+    }
+    return uniqueValueCount;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.variance" id="apidoc.element.simple-statistics.variance">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>variance
+        <span class="apidocSignatureSpan">(x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function variance(x)/*:number*/ {
+    // The variance of no numbers is null
+    if (x.length === 0) {
+        throw new Error('variance requires at least one data point');
+    }
+
+    // Find the mean of squared deviations between the
+    // mean value and each value.
+    return sumNthPowerDeviations(x, 2) / x.length;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.zScore" id="apidoc.element.simple-statistics.zScore">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>zScore
+        <span class="apidocSignatureSpan">(x, mean, standardDeviation)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function zScore(x, mean, standardDeviation)/*:number*/ {
+    return (x - mean) / standardDeviation;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.simple-statistics.bayesian" id="apidoc.module.simple-statistics.bayesian">module simple-statistics.bayesian</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.bayesian.bayesian" id="apidoc.element.simple-statistics.bayesian.bayesian">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>bayesian
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function BayesianClassifier() {
+    // The number of items that are currently
+    // classified in the model
+    this.totalCount = 0;
+    // Every item classified in the model
+    this.data = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.simple-statistics.bayesian.prototype" id="apidoc.module.simple-statistics.bayesian.prototype">module simple-statistics.bayesian.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.bayesian.prototype.score" id="apidoc.element.simple-statistics.bayesian.prototype.score">
+        function <span class="apidocSignatureSpan">simple-statistics.bayesian.prototype.</span>score
+        <span class="apidocSignatureSpan">(item)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">score = function (item) {
+    // Initialize an empty array of odds per category.
+    var odds = {}, category;
+    // Iterate through each key in the item,
+    // then iterate through each category that has been used
+    // in previous calls to `.train()`
+    for (var k in item) {
+        var v = item[k];
+        for (category in this.data) {
+            // Create an empty object for storing key - value combinations
+            // for this category.
+            odds[category] = {};
+
+            // If this item doesn't even have a property, it counts for nothing,
+            // but if it does have the property that we're looking for from
+            // the item to categorize, it counts based on how popular it is
+            // versus the whole population.
+            if (this.data[category][k]) {
+                odds[category][k + '_' + v] = (this.data[category][k][v] || 0) / this.totalCount;
+            } else {
+                odds[category][k + '_' + v] = 0;
+            }
+        }
+    }
+
+    // Set up a new object that will contain sums of these odds by category
+    var oddsSums = {};
+
+    for (category in odds) {
+        // Tally all of the odds for each category-combination pair -
+        // the non-existence of a category does not add anything to the
+        // score.
+        oddsSums[category] = 0;
+        for (var combination in odds[category]) {
+            oddsSums[category] += odds[category][combination];
+        }
+    }
+
+    return oddsSums;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.bayesian.prototype.train" id="apidoc.element.simple-statistics.bayesian.prototype.train">
+        function <span class="apidocSignatureSpan">simple-statistics.bayesian.prototype.</span>train
+        <span class="apidocSignatureSpan">(item, category)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">train = function (item, category) {
+    // If the data object doesn't have any values
+    // for this category, create a new object for it.
+    if (!this.data[category]) {
+        this.data[category] = {};
+    }
+
+    // Iterate through each key in the item.
+    for (var k in item) {
+        var v = item[k];
+        // Initialize the nested object `data[category][k][item[k]]`
+        // with an object of keys that equal 0.
+        if (this.data[category][k] === undefined) {
+            this.data[category][k] = {};
+        }
+        if (this.data[category][k][v] === undefined) {
+            this.data[category][k][v] = 0;
+        }
+
+        // And increment the key for this key/value combination.
+        this.data[category][k][v]++;
+    }
+
+    // Increment the number of items classified
+    this.totalCount++;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.simple-statistics.perceptron" id="apidoc.module.simple-statistics.perceptron">module simple-statistics.perceptron</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.perceptron.perceptron" id="apidoc.element.simple-statistics.perceptron.perceptron">
+        function <span class="apidocSignatureSpan">simple-statistics.</span>perceptron
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function PerceptronModel() {
+    // The weights, or coefficients of the model;
+    // weights are only populated when training with data.
+    this.weights = [];
+    // The bias term, or intercept; it is also a weight but
+    // it's stored separately for convenience as it is always
+    // multiplied by one.
+    this.bias = 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.simple-statistics.perceptron.prototype" id="apidoc.module.simple-statistics.perceptron.prototype">module simple-statistics.perceptron.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.perceptron.prototype.predict" id="apidoc.element.simple-statistics.perceptron.prototype.predict">
+        function <span class="apidocSignatureSpan">simple-statistics.perceptron.prototype.</span>predict
+        <span class="apidocSignatureSpan">(features)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">predict = function (features) {
+
+    // Only predict if previously trained
+    // on the same size feature array(s).
+    if (features.length !== this.weights.length) { return null; }
+
+    // Calculate the sum of features times weights,
+    // with the bias added (implicitly times one).
+    var score = 0;
+    for (var i = 0; i &lt; this.weights.length; i++) {
+        score += this.weights[i] * features[i];
+    }
+    score += this.bias;
+
+    // Classify as 1 if the score is over 0, otherwise 0.
+    if (score &gt; 0) {
+        return 1;
+    } else {
+        return 0;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-statistics.perceptron.prototype.train" id="apidoc.element.simple-statistics.perceptron.prototype.train">
+        function <span class="apidocSignatureSpan">simple-statistics.perceptron.prototype.</span>train
+        <span class="apidocSignatureSpan">(features, label)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">train = function (features, label) {
+    // Require that only labels of 0 or 1 are considered.
+    if (label !== 0 &amp;&amp; label !== 1) { return null; }
+    // The length of the feature array determines
+    // the length of the weight array.
+    // The perceptron will continue learning as long as
+    // it keeps seeing feature arrays of the same length.
+    // When it sees a new data shape, it initializes.
+    if (features.length !== this.weights.length) {
+        this.weights = features;
+        this.bias = 1;
+    }
+    // Make a prediction based on current weights.
+    var prediction = this.predict(features);
+    // Update the weights if the prediction is wrong.
+    if (prediction !== label) {
+        var gradient = label - prediction;
+        for (var i = 0; i &lt; this.weights.length; i++) {
+            this.weights[i] += gradient * features[i];
+        }
+        this.bias += gradient;
+    }
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
